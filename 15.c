@@ -4,11 +4,16 @@
 #include <math.h>
 
 int main() {
-    int x, y;
+    int x, y, result = 1;
     printf("Enter the values of x and y: ");
     scanf("%d %d", &x, &y);
 
-    printf("%d", (int)pow(x, y));
+    for (int i = 1; i <= y ; i++)
+    {
+        result = result * x;
+    }
+
+    printf("%d to the power %d is %d\n", x, y, result);
 
     return 0;
 }
